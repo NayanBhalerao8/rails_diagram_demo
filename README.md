@@ -1,0 +1,1 @@
+# rails_diagram_demo

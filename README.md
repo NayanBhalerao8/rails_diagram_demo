@@ -22,4 +22,15 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-<pre> ## 🧭 Post Creation Flow ```mermaid sequenceDiagram participant U as User participant C as PostsController participant P as Post participant J as Job U->>C: Create new post (POST /posts) C->>P: Save post P->>J: Enqueue background job J-->>P: Process post (e.g., notify, index) ``` </pre>
+
+```mermaid
+sequenceDiagram
+  participant U as User
+  participant C as PostsController
+  participant P as Post
+  participant J as Job
+
+  U->>C: Create new post (POST /posts)
+  C->>P: Save post
+  P->>J: Enqueue background job
+  J-->>P: Process post (e.g., notify, index)
